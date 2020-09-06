@@ -7,6 +7,7 @@ from import_export.admin import ImportExportModelAdmin
 class EnregistrementResource(resources.ModelResource):
     date_prelevement = fields.Field(attribute='date_prelevement', column_name='date_prelevement', widget=widgets.DateWidget('%d/%m/%y'))
     date_traitement= fields.Field(attribute='date_traitement', column_name='date_traitement', widget=widgets.DateWidget('%d/%m/%y'))
+    
     class Meta:
         model = Enregistrement
         fields=('genre', 'code', 'date_prelevement', 'date_traitement', 'copies_ARN', 'log_copies_ARN')
